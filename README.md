@@ -5,7 +5,9 @@
 A simple React + TypeScript application to search GitHub users and explore their repositories with an expandable list.  
 This project was created as a recruitment test to demonstrate best practices in React, API integration, and deployment.
 
----
+## 🚀 Live Demo
+👉 [Click here](https://asruldev.github.io/sigithub/)
+
 
 ## 🚀 Features
 
@@ -16,7 +18,6 @@ This project was created as a recruitment test to demonstrate best practices in 
 ✅ Loading state and error handling  
 ✅ Deployed to GitHub Pages
 
----
 
 ## 📦 Tech Stack
 
@@ -25,7 +26,6 @@ This project was created as a recruitment test to demonstrate best practices in 
 - CSS (no framework)
 - gh-pages for deployment
 
----
 
 ## ⚙️ Getting Started
 
@@ -36,7 +36,6 @@ git clone https://github.com/<username>/<repo-name>.git
 cd <repo-name>
 ````
 
----
 
 ### 2️⃣ Install dependencies
 
@@ -44,7 +43,6 @@ cd <repo-name>
 npm install
 ```
 
----
 
 ### 3️⃣ Run locally (development)
 
@@ -54,7 +52,6 @@ npm run dev
 
 Visit [http://localhost:5173](http://localhost:5173) in your browser.
 
----
 
 ### 4️⃣ Build for production
 
@@ -64,7 +61,6 @@ npm run build
 
 This will generate a `dist` folder.
 
----
 
 ## 🌐 Deploy to GitHub Pages
 
@@ -78,7 +74,6 @@ This project uses the **gh-pages** package to deploy the production build to Git
 npm install gh-pages --save-dev
 ```
 
----
 
 2️⃣ **Add `homepage` in `package.json`**
 
@@ -88,7 +83,6 @@ npm install gh-pages --save-dev
 
 Replace `<username>` and `<repo-name>` with your GitHub username and repository name.
 
----
 
 3️⃣ **Add deploy scripts in `package.json`**
 
@@ -99,7 +93,6 @@ Replace `<username>` and `<repo-name>` with your GitHub username and repository 
 }
 ```
 
----
 
 4️⃣ **Deploy**
 
@@ -113,7 +106,6 @@ This will:
 * Push the `dist` folder to the `gh-pages` branch
 * GitHub will serve it as a static site
 
----
 
 5️⃣ **Enable GitHub Pages**
 
@@ -130,7 +122,6 @@ Your live site will be available at:
 https://<username>.github.io/<repo-name>
 ```
 
----
 
 ## ✅ Good Practices
 
@@ -140,13 +131,11 @@ https://<username>.github.io/<repo-name>
 * ✅ Clean and readable code structure
 * ✅ Public repository with clear instructions
 
----
 
 ## 📄 License
 
 No Licence
 
----
 
 ## 🔖 Test Result
 
