@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Repo } from '../types';
+import type { Repo } from '../types/types';
 
 interface Props {
   repos: Repo[];

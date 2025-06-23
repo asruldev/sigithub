@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchUser from "./components/SearchUser";
-import type { User, Repo } from "./types";
-import { searchUsers, getUserRepos } from "./api";
+import type { User, Repo } from "./types/types";
+import { searchUsers, getUserRepos } from "./helpers/api";
 
 interface UserWithRepos extends User {
   repos?: Repo[];

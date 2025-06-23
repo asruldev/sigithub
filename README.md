@@ -1,54 +1,174 @@
-# React + TypeScript + Vite
+## ✅ **📄 Complete `README.md`**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# Si Github
 
-Currently, two official plugins are available:
+A simple React + TypeScript application to search GitHub users and explore their repositories with an expandable list.  
+This project was created as a recruitment test to demonstrate best practices in React, API integration, and deployment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Search for up to 5 GitHub users by username  
+✅ Click on a user to expand and view all their repositories  
+✅ Nice and responsive design  
+✅ Smooth expand/collapse animation  
+✅ Loading state and error handling  
+✅ Deployed to GitHub Pages
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 📦 Tech Stack
+
+- React + Vite + TypeScript
+- GitHub REST API
+- CSS (no framework)
+- gh-pages for deployment
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/<username>/<repo-name>.git
+cd <repo-name>
+````
+
+---
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3️⃣ Run locally (development)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+### 4️⃣ Build for production
+
+```bash
+npm run build
+```
+
+This will generate a `dist` folder.
+
+---
+
+## 🌐 Deploy to GitHub Pages
+
+This project uses the **gh-pages** package to deploy the production build to GitHub Pages.
+
+### 📌 Steps:
+
+1️⃣ **Install `gh-pages`**
+
+```bash
+npm install gh-pages --save-dev
+```
+
+---
+
+2️⃣ **Add `homepage` in `package.json`**
+
+```json
+"homepage": "https://<username>.github.io/<repo-name>"
+```
+
+Replace `<username>` and `<repo-name>` with your GitHub username and repository name.
+
+---
+
+3️⃣ **Add deploy scripts in `package.json`**
+
+```json
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+```
+
+---
+
+4️⃣ **Deploy**
+
+```bash
+npm run deploy
+```
+
+This will:
+
+* Build the production files
+* Push the `dist` folder to the `gh-pages` branch
+* GitHub will serve it as a static site
+
+---
+
+5️⃣ **Enable GitHub Pages**
+
+On your GitHub repository:
+
+* Go to **Settings → Pages**
+* Select branch: `gh-pages`
+* Select folder: `/ (root)`
+* Click **Save**
+
+Your live site will be available at:
+
+```
+https://<username>.github.io/<repo-name>
+```
+
+---
+
+## ✅ Good Practices
+
+* ✅ Fully typed with TypeScript
+* ✅ Proper error handling
+* ✅ Responsive layout for mobile and desktop
+* ✅ Clean and readable code structure
+* ✅ Public repository with clear instructions
+
+---
+
+## 📄 License
+
+No Licence
+
+---
+
+## 🔖 Test Result
+
+```
+ RERUN  src/tests/api.test.ts x6 
+
+ ✓ src/tests/api.test.ts (4 tests) 4ms
+   ✓ api helpers > searchUsers > calls fetch with correct URL and returns JSON 2ms
+   ✓ api helpers > searchUsers > throws error if response is not ok 1ms
+   ✓ api helpers > getUserRepos > calls fetch with correct URL and returns JSON 0ms
+   ✓ api helpers > getUserRepos > throws error if response is not ok 0ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  22:58:58
+   Duration  90ms
+```
+
+## 🙌 Author
+
+Asrul harahap
+
+Built with ❤️ for test recruitment purposes.
+Feel free to fork, use and improve it!
