@@ -1,6 +1,5 @@
 ## ✅ **📄 Complete `README.md`**
 
-````markdown
 # Si Github
 
 A simple React + TypeScript application to search GitHub users and explore their repositories with an expandable list.  
@@ -150,6 +149,12 @@ No Licence
 ---
 
 ## 🔖 Test Result
+
+Run with:
+
+```bash
+npm run test
+```
 
 ```
  RERUN  src/tests/api.test.ts x6 
