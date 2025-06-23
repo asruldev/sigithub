@@ -1,11 +1,9 @@
-## ✅ **📄 Complete `README.md`**
-
 # Si Github
 
 A simple React + TypeScript application to search GitHub users and explore their repositories with an expandable list.  
 This project was created as a recruitment test to demonstrate best practices in React, API integration, and deployment.
 
-## 🚀 Live Demo
+## 💻 Live Demo
 👉 [Click here](https://asruldev.github.io/sigithub/)
 
 
