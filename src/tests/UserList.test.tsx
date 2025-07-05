@@ -12,13 +12,17 @@ describe('UserList', () => {
       id: 1,
       login: 'asruldev',
       avatar_url: 'https://avatars.githubusercontent.com/u/1',
-      html_url: "https://github.com/asruldev"
+      html_url: "https://github.com/asruldev",
+      type: 'User',
+      site_admin: false
     },
     {
       id: 2,
       login: 'anisfikriyyah',
       avatar_url: 'https://avatars.githubusercontent.com/u/2',
-      html_url: "https://github.com/anisfikriyyah"
+      html_url: "https://github.com/anisfikriyyah",
+      type: 'User',
+      site_admin: false
     },
   ];
 
@@ -28,6 +32,10 @@ describe('UserList', () => {
     // Check user names
     expect(screen.getByText('asruldev')).toBeInTheDocument();
     expect(screen.getByText('anisfikriyyah')).toBeInTheDocument();
+    
+    // Check user logins
+    expect(screen.getByText('@asruldev')).toBeInTheDocument();
+    expect(screen.getByText('@anisfikriyyah')).toBeInTheDocument();
   });
 
   it('calls onSelect when a user is clicked', () => {
@@ -49,6 +57,6 @@ describe('UserList', () => {
 
   it('renders nothing if user list is empty', () => {
     const { container } = render(<UserList users={[]} onSelect={() => {}} />);
-    expect(container.querySelectorAll('li').length).toBe(0);
+    expect(container.querySelector('.user-list')).not.toBeInTheDocument();
   });
 });

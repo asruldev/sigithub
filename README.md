@@ -1,166 +1,278 @@
-# Si Github
+# 🚀 GitHub Explorer
 
-A simple React + TypeScript application to search GitHub users and explore their repositories with an expandable list.  
-This project was created as a recruitment test to demonstrate best practices in React, API integration, and deployment.
+A modern, beautiful React application for discovering GitHub users and exploring their repositories. Built with TypeScript, Vite, and a GitHub-inspired design system.
 
-## 💻 Live Demo
-👉 [Click here](https://asruldev.github.io/sigithub/)
+![GitHub Explorer](https://img.shields.io/badge/React-19.1.0-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-6.3.5-purple?logo=vite)
+![License](https://img.shields.io/badge/License-MIT-green)
 
+## ✨ Live Demo
 
-## 🚀 Features
+🌐 **[Try it live!](https://asruldev.github.io/sigithub/)**
 
-✅ Search for up to 5 GitHub users by username  
-✅ Click on a user to expand and view all their repositories  
-✅ Nice and responsive design  
-✅ Smooth expand/collapse animation  
-✅ Loading state and error handling  
-✅ Deployed to GitHub Pages
+## 🎯 Features
 
+### 🔍 **Smart Search**
+- **Real-time GitHub user search** with instant results
+- **Keyboard shortcuts** for power users (`/` or `Ctrl+K` to focus search)
+- **Search suggestions** with example queries
+- **Debounced search** to prevent API spam
 
-## 📦 Tech Stack
+### 👥 **User Discovery**
+- **Up to 5 users** displayed per search
+- **User avatars** and profile information
+- **Direct links** to GitHub profiles
+- **Responsive design** for all devices
 
-- React + Vite + TypeScript
-- GitHub REST API
-- CSS (no framework)
-- gh-pages for deployment
+### 📚 **Repository Exploration**
+- **Expandable user cards** with smooth animations
+- **Repository details** including descriptions and star counts
+- **Formatted numbers** (1k, 2.5k, etc.) for better readability
+- **Empty states** for users without repositories
 
+### 🎨 **Modern UI/UX**
+- **GitHub-inspired design** with familiar colors and patterns
+- **Dark mode support** (follows system preference)
+- **Smooth animations** and hover effects
+- **Loading states** with spinners and progress indicators
+- **Error handling** with user-friendly messages
 
-## ⚙️ Getting Started
+### 📱 **Responsive Design**
+- **Mobile-first approach** with touch-friendly interactions
+- **Tablet and desktop** optimized layouts
+- **Accessible design** with proper ARIA labels
+- **Keyboard navigation** support
 
-### 1️⃣ Clone the repository
+## 🛠️ Tech Stack
 
+### **Frontend**
+- **React 19.1.0** - Latest React with concurrent features
+- **TypeScript 5.8.3** - Type-safe development
+- **Vite 6.3.5** - Lightning-fast build tool
+- **CSS3** - Modern styling with CSS custom properties
+
+### **APIs & Services**
+- **GitHub REST API** - User and repository data
+- **GitHub Pages** - Free hosting and deployment
+
+### **Development Tools**
+- **ESLint** - Code quality and consistency
+- **Vitest** - Fast unit testing
+- **gh-pages** - Automated deployment
+
+## 🚀 Quick Start
+
+### Prerequisites
+- **Node.js** 18+ 
+- **npm** or **yarn**
+
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/<username>/<repo-name>.git
-cd <repo-name>
-````
+git clone https://github.com/asruldev/sigithub.git
+cd sigithub
+```
 
-
-### 2️⃣ Install dependencies
-
+### 2. Install Dependencies
 ```bash
 npm install
 ```
 
-
-### 3️⃣ Run locally (development)
-
+### 3. Start Development Server
 ```bash
 npm run dev
 ```
 
-Visit [http://localhost:5173](http://localhost:5173) in your browser.
+Visit [http://localhost:5173](http://localhost:5173) to see the app in action!
 
-
-### 4️⃣ Build for production
-
+### 4. Build for Production
 ```bash
 npm run build
 ```
 
-This will generate a `dist` folder.
+## 🧪 Testing
 
-
-## 🌐 Deploy to GitHub Pages
-
-This project uses the **gh-pages** package to deploy the production build to GitHub Pages.
-
-### 📌 Steps:
-
-1️⃣ **Install `gh-pages`**
-
+Run the test suite:
 ```bash
-npm install gh-pages --save-dev
+npm test
 ```
 
+### Test Coverage
+- ✅ API helper functions
+- ✅ Component rendering
+- ✅ User interactions
+- ✅ Error handling
 
-2️⃣ **Add `homepage` in `package.json`**
+## 📦 Project Structure
 
-```json
-"homepage": "https://<username>.github.io/<repo-name>"
+```
+sigithub/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # React components
+│   │   ├── SearchUser.tsx  # Search functionality
+│   │   ├── RepoList.tsx    # Repository display
+│   │   └── UserList.tsx    # User list component
+│   ├── helpers/            # Utility functions
+│   │   └── api.ts         # GitHub API integration
+│   ├── types/             # TypeScript definitions
+│   │   └── types.ts       # User and Repo interfaces
+│   ├── styles/            # Styling
+│   │   └── index.css      # Main stylesheet
+│   ├── tests/             # Test files
+│   ├── App.tsx            # Main application component
+│   └── main.tsx           # Application entry point
+├── package.json           # Dependencies and scripts
+├── tsconfig.json          # TypeScript configuration
+├── vite.config.ts         # Vite configuration
+└── README.md              # This file
 ```
 
-Replace `<username>` and `<repo-name>` with your GitHub username and repository name.
+## 🎨 Design System
 
+### **Colors**
+- **Primary**: `#0969da` (GitHub blue)
+- **Background**: `#f6f8fa` (light gray)
+- **Text**: `#24292f` (dark gray)
+- **Borders**: `#d0d7de` (medium gray)
 
-3️⃣ **Add deploy scripts in `package.json`**
+### **Typography**
+- **Font**: Inter (Google Fonts)
+- **Weights**: 300, 400, 500, 600, 700
+- **Responsive**: Scales from 0.8rem to 2.5rem
 
-```json
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-```
+### **Components**
+- **Cards**: Rounded corners with subtle shadows
+- **Buttons**: Hover effects with transform animations
+- **Inputs**: Focus states with blue outline
+- **Loading**: Smooth spinner animations
 
+## 🌐 Deployment
 
-4️⃣ **Deploy**
+This project is automatically deployed to GitHub Pages using the `gh-pages` package.
 
+### Manual Deployment
 ```bash
 npm run deploy
 ```
 
-This will:
+### Deployment Process
+1. **Build** the production files
+2. **Push** to `gh-pages` branch
+3. **GitHub Pages** serves the static site
 
-* Build the production files
-* Push the `dist` folder to the `gh-pages` branch
-* GitHub will serve it as a static site
+## 🔧 Configuration
 
+### Environment Variables
+No environment variables required - uses public GitHub API.
 
-5️⃣ **Enable GitHub Pages**
+### API Rate Limits
+- **Unauthenticated**: 60 requests/hour
+- **Authenticated**: 5,000 requests/hour
 
-On your GitHub repository:
+### Customization
+- **Colors**: Modify CSS custom properties in `src/styles/index.css`
+- **API**: Update endpoints in `src/helpers/api.ts`
+- **Styling**: Edit component styles in the CSS file
 
-* Go to **Settings → Pages**
-* Select branch: `gh-pages`
-* Select folder: `/ (root)`
-* Click **Save**
+## 🤝 Contributing
 
-Your live site will be available at:
+We welcome contributions! Here's how you can help:
 
+### 1. Fork the Repository
+```bash
+git clone https://github.com/your-username/sigithub.git
 ```
-https://<username>.github.io/<repo-name>
+
+### 2. Create a Feature Branch
+```bash
+git checkout -b feature/amazing-feature
 ```
 
+### 3. Make Your Changes
+- Follow the existing code style
+- Add tests for new features
+- Update documentation
 
-## ✅ Good Practices
+### 4. Commit and Push
+```bash
+git commit -m "Add amazing feature"
+git push origin feature/amazing-feature
+```
 
-* ✅ Fully typed with TypeScript
-* ✅ Proper error handling
-* ✅ Responsive layout for mobile and desktop
-* ✅ Clean and readable code structure
-* ✅ Public repository with clear instructions
+### 5. Open a Pull Request
+- Describe your changes clearly
+- Include screenshots if UI changes
+- Link any related issues
 
+## 📝 Development Guidelines
+
+### **Code Style**
+- Use **TypeScript** for type safety
+- Follow **ESLint** rules
+- Use **functional components** with hooks
+- Keep components **small and focused**
+
+### **Testing**
+- Write **unit tests** for utilities
+- Test **component rendering**
+- Mock **API calls** in tests
+- Maintain **good test coverage**
+
+### **Performance**
+- Use **React.memo** for expensive components
+- Implement **lazy loading** for images
+- Optimize **bundle size** with tree shaking
+- Use **CSS-in-JS** sparingly
+
+## 🐛 Known Issues
+
+- **TypeScript errors** in IDE: These are IDE-specific and don't affect the build
+- **API rate limits**: Consider authentication for production use
+- **Mobile performance**: Large repository lists may be slow on older devices
+
+## 🔮 Roadmap
+
+### **Planned Features**
+- [ ] **User authentication** with GitHub OAuth
+- [ ] **Repository filtering** by language, stars, etc.
+- [ ] **Advanced search** with multiple criteria
+- [ ] **Repository analytics** and insights
+- [ ] **Offline support** with service workers
+- [ ] **PWA features** (installable app)
+
+### **Improvements**
+- [ ] **Performance optimization** for large datasets
+- [ ] **Accessibility enhancements** (ARIA, screen readers)
+- [ ] **Internationalization** (i18n) support
+- [ ] **Theme customization** options
 
 ## 📄 License
 
-No Licence
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
+## 🙏 Acknowledgments
 
-## 🔖 Test Result
+- **GitHub** for the amazing API and design inspiration
+- **React team** for the incredible framework
+- **Vite team** for the fast build tool
+- **Inter font** by Google Fonts
+- **Open source community** for all the amazing tools
 
-Run with:
+## 👨‍💻 Author
 
-```bash
-npm run test
-```
+**Asrul Harahap**
 
-```
- RERUN  src/tests/api.test.ts x6 
+- 🌐 [GitHub](https://github.com/asruldev)
+- 📧 [Email](mailto:talkasrul@gmail.com)
+- 💼 [LinkedIn](https://linkedin.com/in/asruldev)
 
- ✓ src/tests/api.test.ts (4 tests) 4ms
-   ✓ api helpers > searchUsers > calls fetch with correct URL and returns JSON 2ms
-   ✓ api helpers > searchUsers > throws error if response is not ok 1ms
-   ✓ api helpers > getUserRepos > calls fetch with correct URL and returns JSON 0ms
-   ✓ api helpers > getUserRepos > throws error if response is not ok 0ms
+---
 
- Test Files  1 passed (1)
-      Tests  4 passed (4)
-   Start at  22:58:58
-   Duration  90ms
-```
+<div align="center">
 
-## 🙌 Author
+**Built with ❤️ for the GitHub community**
 
-Asrul harahap
+[⭐ Star this repo](https://github.com/asruldev/sigithub) | [🐛 Report issues](https://github.com/asruldev/sigithub/issues) | [💡 Suggest features](https://github.com/asruldev/sigithub/discussions)
 
-Built with ❤️ for test recruitment purposes.
-Feel free to fork, use and improve it!
+</div>
